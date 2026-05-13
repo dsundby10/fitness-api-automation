@@ -1,0 +1,24 @@
+{
+  "name": "fitness-api-automation",
+  "version": "1.0.0",
+  "description": "Fitness tracking API with comprehensive test automation, CI/CD pipeline, and React UI",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test:api": "pytest tests/api/ -v --junit-xml=results/api-results.xml",
+    "test:ui": "pytest tests/ui/ -v --junit-xml=results/ui-results.xml",
+    "test:all": "pytest tests/ -v --junit-xml=results/all-results.xml",
+    "dev": "nodemon server.js",
+    "build:ui": "cd ui && npm run build",
+    "serve:ui": "cd ui && npm run preview"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
