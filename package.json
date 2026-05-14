@@ -10,8 +10,9 @@
     "test:ui": "pytest tests/ui/ -v --junit-xml=results/ui-results.xml",
     "test:all": "pytest tests/ -v --junit-xml=results/all-results.xml",
     "dev": "nodemon server.js",
-    "build:ui": "cd ui && npm run build",
-    "serve:ui": "cd ui && npm run preview"
+    "ui:dev": "cd ui && npm install && npm run dev",
+    "ui:build": "cd ui && npm install && npm run build",
+    "ui:preview": "cd ui && npm run preview"
   },
   "dependencies": {
     "express": "^4.18.2",
